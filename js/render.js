@@ -59,7 +59,7 @@ function renderDishes(dishes, categoryName) {
       dishCard.classList.add('dishes-card');
 
       dishCard.innerHTML = `
-            <img src="${dish.img}" alt="">
+            <img src="./img/categories/${dish.img}.jpg" alt="">
             <div class="dishes-card__info">
               <div class="dishes-card__description">
                 <h2>${dish.name[lang]}</h2>

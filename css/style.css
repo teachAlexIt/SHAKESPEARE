@@ -230,6 +230,7 @@ body.menu {
       border-radius: 8px;
       overflow: hidden;
       flex-shrink: 0;
+      transition: 0.5s;
       
 
 
@@ -240,6 +241,7 @@ body.menu {
         object-position: center center;
       }
 
+
       & .dishes-card__info{
         background-color: var(--color2);
         padding: 20px 10px;
@@ -248,6 +250,7 @@ body.menu {
         flex-direction: column;
         justify-content: space-between;
         gap: 25px;
+        transition: 0.5s;
 
         & h2{
           font-size: 20px;
@@ -279,11 +282,13 @@ body.menu {
 
               & span{
                 font-weight: 400;
+                display: flex;
+                gap: 5px;
 
-                &#portion-name{
+                &.portion-name{
                   font-weight: 600;
                 }
-                &#portion-cost{
+                &.portion-cost{
                   font-weight: 600;
                 }
               }
@@ -306,7 +311,7 @@ body.menu {
                 background-color: var(--color1);
                 color: var(--color2);
 
-                &#portion-plus{
+                &.portion-plus{
                   background-color: var(--color3);
                   border-color: var(--color3);
                 }
@@ -328,6 +333,14 @@ body.menu {
         }
       }
     }
+
+    & .change {
+      border: 1px solid var(--color3); /* Пример стиля для класса change */
+      
+      & .dishes-card__info{
+        background-color: rgb(209, 255, 209);
+      }
+    }
   }
 }
 
@@ -335,6 +348,3 @@ body.menu {
   opacity: 0;
 }
 
-.change {
-  border: 2px solid red !important; /* Пример стиля для класса change */
-}

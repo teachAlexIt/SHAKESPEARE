@@ -11,18 +11,17 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'блюдо 1',
-          es: 'plato 1',
-          en: 'dish 1',
+          ru: 'Грибная вырезка',
+          es: 'Lomo con setas',
+          en: 'Mushroom Tenderloin',
         },
         description: {
-          ru: '',
-          es: '',
-          en: '',
+          ru: 'Говяжья вырезка на гриле с грибным соусом и овощным гарниром',
+          es: 'Solomillo de ternera a la plancha con salsa de champiñones y guarnición de verduras',
+          en: 'Grilled beef tenderloin with mushroom sauce and vegetable garnish',
         },
         portionList: [
           { name: '1', cost: '6000' },
-          { name: '1.5', cost: '8000' },
         ],
       },
       // Конец блюда 1
@@ -30,14 +29,14 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'блюдо 2',
-          es: 'plato 2',
-          en: 'dish 2',
+          ru: 'Кафе де Пари',
+          es: 'Café de París',
+          en: 'Café de Paris',
         },
         description: {
-          ru: '',
-          es: '',
-          en: '',
+          ru: 'Нарезанная ломтиками говяжья вырезка на гриле с соусом "Кафе де Пари", жареным картофелем и салатом "Цезарь',
+          es: 'Solomillo de ternera a la plancha cortado en juliana con salsa Café de París, patatas asadas y ensalada César',
+          en: 'Julienne sliced grilled beef tenderloin with Café de Paris sauce, roast potatoes and Caesar salad',
         },
         portionList: [
           { name: '1', cost: '7000' },
@@ -111,18 +110,17 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'напиток 1',
-          es: 'bebida 1',
-          en: 'drink 1',
+          ru: 'Аффогато',
+          es: 'Affogato',
+          en: 'Affogato',
         },
         description: {
-          ru: '',
-          es: '',
-          en: '',
+          ru: 'С ванильным мороженым и эспрессо',
+          es: 'Con helado de vainilla y café expreso.',
+          en: 'With vanilla ice cream and espresso',
         },
         portionList: [
           { name: '1', cost: '2000' },
-          { name: '1.5', cost: '3000' },
         ],
       },
       // Конец напитка 1
@@ -198,6 +196,20 @@ const dishesList = [
   },
   // Конец категории "Алкогольные напитки"
 ];
+
+// Функция для обновления img поля
+function updateDishesWithImage() {
+  dishesList.forEach(categoryObj => {
+    const categoryNameEn = categoryObj.category.en.toLowerCase().replace(/\s+/g, '-');
+    categoryObj.dishes.forEach(dish => {
+      const dishNameEn = dish.name.en.toLowerCase().replace(/\s+/g, '-');
+      dish.img = `${categoryNameEn}/${dishNameEn}`; // Заполнение поля img в формате 'category[en]/name[en]'
+    });
+  });
+}
+
+// Обновляем данные
+updateDishesWithImage();
 
 export default dishesList;
 
