@@ -186,3 +186,22 @@ function updatePortion(button, action, dish, categoryName) {
 
 // Создание кнопок категорий при загрузке страницы
 createCategoryButtons();
+
+
+
+
+function basketBoxOpenClouse(){
+  basketButtonOpen.classList.toggle('button_moveLeft');
+  basketButtonClouse.classList.toggle('basket-clouse_active');
+  basketBox.classList.toggle('basket-box_open');
+}
+const basketButtonOpen = document.querySelector('.basket');
+const basketButtonClouse = document.querySelector('.basket-clouse');
+const basketBox = document.querySelector('.basket-box');
+
+basketButtonOpen.onclick = function(){
+  basketBoxOpenClouse()
+}
+basketButtonClouse.onclick = function(){
+  basketBoxOpenClouse()
+}
