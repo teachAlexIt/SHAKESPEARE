@@ -39,24 +39,10 @@
     <div class="basket-box">
       <h3>Ваш заказ:</h3>
       <div class="basket-box__list basket-list">
-        <div class="basket-list__item basket-card">
-          <div class="basket-card__info">
-            <img src="./img/categories/${dish.img}.jpg" alt="">
-            <div class="dishes-card__description">
-              <h2>${dish.name[lang]}</h2>
-              <h2><i>${dish.name[lang]}</i></h2>
-              <p>${dish.description[lang]} portion</p>  
-            </div>
-          </div>
-          <div class="basket-card__management">
-            <button class="portion-minus"><i class="fa-solid fa-minus"></i></button>
-            <span class="portion-number">${}dish.portionNumber</span>
-            <button class="portion-plus"><i class="fa-solid fa-plus"></i></button>
-          </div>
-          <p class="basket-card__cost" >
-            Стоимость: <span></span>
-          </p>
-        </div>
+        
+      </div>
+      <div class="basket-box__total-price">
+        Итого: $<span id="total-price"></span>
       </div>
     </div>
   </main>

@@ -518,6 +518,25 @@ body.menu {
     }
   }
 
+  & .basket-box__total-price{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color3);
+    color: var(--color2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+
+    & span{
+      font-weight: 600;
+    }
+  }
+
 }
 
 .basket-box_open {

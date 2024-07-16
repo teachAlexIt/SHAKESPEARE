@@ -209,7 +209,7 @@ function updateBasket() {
           <div class="dishes-card__description">
             <h2>${item.name}</h2>
             <h2><i>'${dishObj.name.en}'</i></h2>
-            <p><span>${item.portion}</span> portion ${item.cost}</p>  
+            <p><span>${item.portion}</span> portion $ ${item.cost}</p>  
           </div>
         </div>
         <div class="basket-card__management">
@@ -229,6 +229,7 @@ function updateBasket() {
       basketListDiv.appendChild(basketCard);
     });
   }
+  calculTotalPrice()
 }
 
 
@@ -305,8 +306,14 @@ createCategoryButtons();
 
 
 
-
-
+const totalPriceSpan = document.querySelector('#total-price');
+function calculTotalPrice(){
+  let totalPrice = 0;
+  for (const cart of changedCart){
+    totalPrice += cart.totalCost
+  }
+  totalPriceSpan.innerText = totalPrice;
+}
 
 function basketBoxOpenClouse() {
   basketButtonOpen.classList.toggle('button_moveLeft');
