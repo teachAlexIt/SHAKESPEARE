@@ -8,12 +8,12 @@
   user-select: none;
 }
 
-button{
+button {
   cursor: pointer;
   opacity: 0.85;
   transition: 0.4s;
 
-  &:hover{
+  &:hover {
     opacity: 1;
   }
 }
@@ -25,7 +25,7 @@ body {
 
   color: var(--color1);
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     width: 0;
   }
 }
@@ -152,13 +152,13 @@ body.menu {
             color: var(--color1);
           }
 
-          & hr{
+          & hr {
             width: 1px;
             background-color: var(--color1);
           }
         }
 
-        & .basket{
+        & .basket {
           font-size: 24px;
           line-height: 100%;
           color: var(--color1);
@@ -173,11 +173,11 @@ body.menu {
           z-index: 2;
         }
 
-        & .button_moveLeft{
+        & .button_moveLeft {
           transform: translateX(-48px);
         }
 
-        & .basket-clouse{
+        & .basket-clouse {
           position: fixed;
           width: 40px;
           height: 20px;
@@ -186,9 +186,9 @@ body.menu {
           z-index: 1;
           background-color: transparent;
           border: none;
-      
-      
-          & span{
+
+
+          & span {
             position: absolute;
             width: 40px;
             height: 2px;
@@ -197,38 +197,40 @@ body.menu {
             left: 0;
             transition: 0.5s;
             opacity: 0;
-      
-            &:nth-child(1){
+
+            &:nth-child(1) {
               top: 9px;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
               top: 9px;
             }
-      
+
           }
         }
 
-        & .basket-clouse_active{
-    
-          & span{
+        & .basket-clouse_active {
+
+          & span {
             opacity: 1;
-            
-            &:nth-child(1){
+
+            &:nth-child(1) {
               top: 9px;
               transform: rotate(45deg);
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
               top: 9px;
               transform: rotate(-45deg);
             }
-      
+
           }
         }
       }
     }
   }
 
-  & h1{
+  & h1 {
     font-size: 36px;
     line-height: 100%;
     font-weight: 700;
@@ -237,7 +239,7 @@ body.menu {
     position: relative;
   }
 
-  & .categories-list{
+  & .categories-list {
     padding: 8px 20px;
     display: flex;
     gap: 10px;
@@ -245,11 +247,11 @@ body.menu {
     width: 100%;
     background-color: rgba(248, 248, 248, 0.8);
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       height: 0;
     }
 
-    & button{
+    & button {
       flex-shrink: 0;
       padding: 8px;
       border: 1px solid var(--color1);
@@ -257,7 +259,7 @@ body.menu {
       text-transform: uppercase;
     }
 
-    & button._active{
+    & button._active {
       background-color: var(--color1);
       color: var(--color2);
     }
@@ -271,11 +273,11 @@ body.menu {
     overflow-x: auto;
     transition: 0.5s;
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       height: 0;
     }
 
-    & .dishes-card{
+    & .dishes-card {
       display: flex;
       flex-direction: column;
       width: calc(100vw - 60px);
@@ -285,10 +287,10 @@ body.menu {
       overflow: hidden;
       flex-shrink: 0;
       transition: 0.5s;
-      
 
 
-      & img{
+
+      & img {
         width: 100%;
         height: 200px;
         object-fit: cover;
@@ -296,7 +298,7 @@ body.menu {
       }
 
 
-      & .dishes-card__info{
+      & .dishes-card__info {
         background-color: var(--color2);
         padding: 20px 10px;
         flex-grow: 1;
@@ -306,54 +308,55 @@ body.menu {
         gap: 25px;
         transition: 0.5s;
 
-        & h2{
+        & h2 {
           font-size: 20px;
           line-height: 100%;
           margin-bottom: 10px;
           font-weight: 700;
         }
 
-        & p{
+        & p {
           font-size: 14px;
           line-height: 140%;
         }
 
-        & .dishes-card__management{
+        & .dishes-card__management {
           display: flex;
           flex-direction: column;
           gap: 8px;
 
-          & .portion-name{
+          & .portion-name {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 0px;
 
-            & p{
+            & p {
               font-size: 16px;
               display: flex;
               flex-direction: column;
 
-              & span{
+              & span {
                 font-weight: 400;
                 display: flex;
                 gap: 5px;
 
-                &.portion-name{
+                &.portion-name {
                   font-weight: 600;
                 }
-                &.portion-cost{
+
+                &.portion-cost {
                   font-weight: 600;
                 }
               }
             }
 
-            & div{
+            & div {
               display: flex;
               gap: 10px;
 
 
-              & button{
+              & button {
                 display: flex;
                 width: 40px;
                 height: 40px;
@@ -365,7 +368,7 @@ body.menu {
                 background-color: var(--color1);
                 color: var(--color2);
 
-                &.portion-plus{
+                &.portion-plus {
                   background-color: var(--color3);
                   border-color: var(--color3);
                 }
@@ -389,9 +392,10 @@ body.menu {
     }
 
     & .change {
-      border: 1px solid var(--color3); /* Пример стиля для класса change */
-      
-      & .dishes-card__info{
+      border: 1px solid var(--color3);
+      /* Пример стиля для класса change */
+
+      & .dishes-card__info {
         background-color: rgb(209, 255, 209);
       }
     }
@@ -399,7 +403,7 @@ body.menu {
 }
 
 
-.basket-box{
+.basket-box {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -408,18 +412,119 @@ body.menu {
   left: 100%;
   transition: 0.5s;
   z-index: 1;
+  padding: 80px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 50px;
 
-  
+  & h3{
+    font-size: 24px;
+  }
+
+  & .basket-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & .basket-card {
+      flex-shrink: 0;
+      width: 100%;
+      border: 1px solid;
+      border-radius: 8px;
+      padding: 4px;
+      display: flex;
+      position: relative;
+      
+      & .basket-card__info{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        & img {
+          width: calc(100% - 140px);
+          border-radius: 8px;
+        }
+        & .dishes-card__description{
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          & h2{
+            font-size: 18px;
+            & i{
+              font-weight: 300;
+            }
+          }
+          & span{
+            font-weight: 600;
+          }
+        }
+      }
+     
+      & .basket-card__management {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        gap: 4px;
+
+        & button {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--color1);
+          font-size: 20px;
+          border-radius: 4px;
+          background-color: var(--color1);
+          color: var(--color2);
+
+          &.portion-plus {
+            background-color: var(--color3);
+            border-color: var(--color3);
+          }
+        }
+
+        & span {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--color1);
+          font-size: 20px;
+          border-radius: 4px;
+          background-color: var(--color2);
+        }
+      }
+
+      & .basket-card__cost{
+        position: absolute;
+        top: 78px;
+        width: 128px;
+        display: flex;
+        flex-direction: column;
+        color: var(--color1);
+        right: 4px;
+
+        & span{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
 }
 
-.basket-box_open{
+.basket-box_open {
   left: 0;
 
 }
 
-._hide{
+._hide {
   opacity: 0;
 }
-
-
-
