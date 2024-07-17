@@ -60,18 +60,17 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'закуска 1',
-          es: 'aperitivo 1',
-          en: 'snack 1',
+          ru: 'Сырная тарелка',
+          es: '',
+          en: 'Cheese Platter',
         },
         description: {
-          ru: '',
+          ru: 'Импортные и местные сорта сыра, сушеные абрикосы, грецкие орехи, оливки и гризи',
           es: '',
-          en: '',
+          en: 'Imported and local cheese varieties, dried apricots, walnuts, olives and grisi',
         },
         portionList: [
-          { name: '1', cost: '3000' },
-          { name: '1.5', cost: '4500' },
+          { name: '1', cost: '2700' },
         ],
       },
       // Конец закуски 1
@@ -79,18 +78,17 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'закуска 2',
+          ru: 'Тартанка с креветками из авокадо',
           es: 'aperitivo 2',
-          en: 'snack 2',
+          en: 'Avocado Prawn Tartine',
         },
         description: {
-          ru: '',
+          ru: 'На ломтике хлеба из закваски, паштет из свежего авокадо и соте из креветок в кресс-масле, с маринованными арбузными каперсами',
           es: '',
-          en: '',
+          en: 'On a slice of sourdough bread, fresh avocado pate, and sautéed shrimp in cress oil, with pickled watermelon capers',
         },
         portionList: [
-          { name: '1', cost: '3500' },
-          { name: '1.5', cost: '5000' },
+          { name: '1', cost: '3200' },
         ],
       },
       // Конец закуски 2
@@ -128,18 +126,17 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'напиток 2',
+          ru: 'Кафе Мокко',
           es: 'bebida 2',
-          en: 'drink 2',
+          en: 'Cafe Mocha',
         },
         description: {
-          ru: '',
+          ru: 'Эспрессо, молоко, шоколад',
           es: '',
-          en: '',
+          en: 'Espresso, Milk, Chocolate',
         },
         portionList: [
-          { name: '1', cost: '2500' },
-          { name: '1.5', cost: '3500' },
+          { name: '1', cost: '1800' },
         ],
       },
       // Конец напитка 2
@@ -159,9 +156,9 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'алкогольный напиток 1',
-          es: 'bebida alcohólica 1',
-          en: 'alcoholic drink 1',
+          ru: 'Carlsberg 33 cl',
+          es: 'Carlsberg 33 cl',
+          en: 'Carlsberg 33 cl',
         },
         description: {
           ru: '',
@@ -169,8 +166,7 @@ const dishesList = [
           en: '',
         },
         portionList: [
-          { name: '1', cost: '4000' },
-          { name: '1.5', cost: '6000' },
+          { name: '33ml', cost: '1200' },
         ],
       },
       // Конец алкогольного напитка 1
@@ -178,9 +174,9 @@ const dishesList = [
       {
         img: '',
         name: {
-          ru: 'алкогольный напиток 2',
-          es: 'bebida alcohólica 2',
-          en: 'alcoholic drink 2',
+          ru: 'Tuborg Unfiltered 50 cl',
+          es: 'Tuborg Unfiltered 50 cl',
+          en: 'Tuborg Unfiltered 50 cl',
         },
         description: {
           ru: '',
@@ -188,7 +184,7 @@ const dishesList = [
           en: '',
         },
         portionList: [
-          { name: '1', cost: '4500' },
+          { name: '50ml', cost: '1600' },
         ],
       },
       // Конец алкогольного напитка 2

@@ -3,6 +3,19 @@ import dishesList from './dataBase.js';
 // Получение текущего языка страницы
 const lang = document.documentElement.lang;
 
+const words = {
+  portion: {
+    ru: 'порция',
+    en: 'portion',
+    es: 'porción'
+  },
+  cost: {
+    ru: 'стоимость',
+    en: 'cost',
+    es: 'costo'
+  },
+}
+
 // Получение элемента, в который будут добавляться кнопки категорий
 const categoriesDiv = document.getElementById('categoriesList');
 const dishesListDiv = document.querySelector('.dishes-list');
@@ -71,7 +84,7 @@ function renderDishes(dishes, categoryName) {
               <div class="dishes-card__management">
                 ${dish.portionList.map(portion => `
                   <div class="portion-name">
-                    <p><span>Порция <span class="portion-name">${portion.name}</span> - </span><span>$ <span class="portion-cost">${portion.cost}</span></span></p>
+                    <p><span>${words.portion[lang]} <span class="portion-name">${portion.name}</span> - </span><span>$ <span class="portion-cost">${portion.cost}</span></span></p>
                     <div>
                       <button class="portion-minus"><i class="fa-solid fa-minus"></i></button>
                       <span class="portion-number">0</span>
@@ -212,7 +225,7 @@ function updateBasket() {
           <div class="dishes-card__description">
             <h2>${item.name}</h2>
             <h2><i>'${dishObj.name.en}'</i></h2>
-            <p><span>${item.portion}</span> portion $ ${item.cost}</p>  
+            <p><span>${item.portion}</span> ${words.portion[lang]} $ ${item.cost}</p>  
           </div>
         </div>
         <div class="basket-card__management">
@@ -221,7 +234,7 @@ function updateBasket() {
           <button class="portion-plus"><i class="fa-solid fa-plus"></i></button>
         </div>
         <p class="basket-card__cost" >
-          Стоимость <span>${item.totalCost}$</span>
+          ${words.cost[lang]} <span>${item.totalCost}$</span>
         </p>
       `;
 

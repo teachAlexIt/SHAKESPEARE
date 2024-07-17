@@ -454,13 +454,16 @@ body.menu {
       padding: 4px;
       display: flex;
       position: relative;
+      max-width: 600px;
       
       & .basket-card__info{
         display: flex;
         flex-direction: column;
         gap: 8px;
+        width: 100%;
         & img {
           width: calc(100% - 140px);
+          max-width: calc(100% - 140px);
           border-radius: 8px;
         }
         & .dishes-card__description{
@@ -573,6 +576,7 @@ body.menu {
   background-color: var(--color2);
   padding: 20px;
   width: 70vw;
+  max-width: 500px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
