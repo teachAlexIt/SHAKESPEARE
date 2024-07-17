@@ -192,6 +192,7 @@ function updatePortion(button, action, dish, categoryName) {
   }
 }
 
+
 // Функция для обновления корзины
 function updateBasket() {
   basketListDiv.innerHTML = '';
