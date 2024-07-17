@@ -30,6 +30,15 @@ body {
   }
 }
 
+@keyframes basketButton {
+  0%{
+    background-color: var(--color2);
+  }
+  100%{
+    background-color: var(--color3);
+  }
+}
+
 header.main {
   height: 100vh;
   background-image: url(../img/header_main.jpg);
@@ -171,7 +180,14 @@ body.menu {
           border: 3px solid var(--color1);
           border-radius: 100%;
           z-index: 2;
+          
         }
+        
+        & .basket_have{
+          animation: basketButton 1s infinite alternate ease-in-out;
+          
+        }
+        
 
         & .button_moveLeft {
           transform: translateX(-48px);
@@ -396,7 +412,7 @@ body.menu {
       /* Пример стиля для класса change */
 
       & .dishes-card__info {
-        background-color: rgb(209, 255, 209);
+        background-color: rgb(220, 253, 220);
       }
     }
   }
@@ -546,4 +562,38 @@ body.menu {
 
 ._hide {
   opacity: 0;
+}
+
+.annonce-block{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color2);
+  padding: 20px;
+  width: 70vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 0 20px #12121275;
+  transition: 0.5s;
+
+  & h2{
+    text-align: center;
+  }
+
+  & p{
+    line-height: 120%;
+  }
+  & button{
+    padding: 10px 40px;
+    background-color: var(--color3);
+    border-radius: 6px;
+    color: var(--color2);
+    font-size: 16px;
+  }
+}
+.displayNone{
+  display: none;
 }

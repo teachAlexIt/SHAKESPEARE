@@ -197,8 +197,10 @@ function updateBasket() {
   basketListDiv.innerHTML = '';
 
   if (changedCart.length === 0) {
-    basketListDiv.textContent = 'пока пусто';
+    basketListDiv.textContent = 'Пусто';
+    document.querySelector('button.basket').classList.remove('basket_have');
   } else {
+    document.querySelector('button.basket').classList.add('basket_have');
     changedCart.forEach(item => {
       const dishObj = findDishByName(item.name, item.categoryName);
       const basketCard = document.createElement('div');
@@ -329,4 +331,8 @@ basketButtonOpen.onclick = function () {
 }
 basketButtonClouse.onclick = function () {
   basketBoxOpenClouse()
+}
+
+document.querySelector('#annonce-block-clouse').onclick = function(){
+  document.querySelector('.annonce-block').classList.add('displayNone')
 }
